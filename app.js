@@ -1,20 +1,19 @@
-// Object Literals
+// For of
 
-function fun1(name, age){
-    return{
-        // name: name,
-        // age: age
-        name,
-        age
-    }
+// const names = ['s1','s2','s3'];
+// for(let name of names){
+//     console.log(name);
+// }
+
+
+// For in
+let students ={
+    ID : 501,
+    name: 'Jhon Doe',
+    cgpa: 3.50
 }
-
-// console.log(fun1('Forhad Hossain',27));
-
-// Consize method
-let message = {
-    body(){
-        return 'Consize method';
-    }
+for(let x in students){
+    // console.log(x);
+    // console.log(students[x]);
+    console.log(`${x} : ${students[x]}`); // string template literals
 }
-console.log(message.body());
