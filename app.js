@@ -1,29 +1,41 @@
+// Arrow function (part-2) | arrow with map,filter
+
+var students = [
+  {
+    id: 101,
+    name: "Kamal",
+    gpa: 2.23,
+  },
+  {
+    id: 102,
+    name: "Ahmed",
+    gpa: 4.63,
+  },
+  {
+    id: 103,
+    name: "Zakir",
+    gpa: 5.00,
+  },
+  {
+    id: 104,
+    name: "Sohel",
+    gpa: 3.23,
+  }
+];
+
+// console.log(students);
+
 // Traditional function
-function dis1(){
-    console.log('Traditional Function');
+function studentNames(){
+    return students.filter(function(x){
+        return x.gpa>3;
+    }).map(function(y){
+        return y.name;
+    })
 }
 
-// Arrow function
-const dis2 = () => console.log('Arrow Function');
+// console.log(studentNames());
 
-// dis1();
-// dis2();
-
-// Traditional fun
-function message1(){
-    return "Hi I am message1";
-}
 // Arrow fun
-const message2 = () => "hi I am from message2";
-// console.log(message1());
-// console.log(message2());
-
-// Traditional Fun
-function add1(a,b){
-    return a+b;
-}
-// Arrow Fun
-const add2 = (a,b) => a+b;
-
-console.log(add1(10,20));
-console.log(add2(10,20));
+const studentNames2 = () => students.filter((x) => x.gpa> 4).map((y) =>y.name);
+console.log(studentNames2());
